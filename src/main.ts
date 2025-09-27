@@ -41,7 +41,7 @@ async function bootstrap() {
   );
   app.use(pinoHttp({ level: 'info' }));
   const config = new DocumentBuilder()
-    .setTitle('Business Date API')
+    .setTitle('API mock rethus')
     .setDescription('API mock rethus')
     .setVersion('1.0')
     .build();
