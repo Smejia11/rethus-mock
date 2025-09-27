@@ -55,47 +55,8 @@ $ pnpm run test:e2e
 
 # test coverage
 $ pnpm run test:cov
-
 ```
 
-# Use service
-
-```bash
-GET /api/v1/business-date
-```
-## Example use local 
-
-```bash
-curl --location 'localhost:3000/api/v1/business-date?date=2025-09-28T23%3A00%3A00Z&days=1' \
-```
-
-<img width="811" height="620" alt="image" src="https://github.com/user-attachments/assets/ddf5f08a-4d2f-4ca2-b135-dbfceecbfef1" />
-
-
-## Query Parameters
-
-| Parameter | Type                           | Required | Description                               |
-| --------- | ------------------------------ | -------- | ----------------------------------------- |
-| `days`    | number                         | optional | Business days to add (positive integer).  |
-| `hours`   | number                         | optional | Business hours to add (positive integer). |
-| `date`    | string (ISO 8601 UTC with `Z`) | optional | Starting date/time in UTC.                |
-
-## Example response 200
-
-```json
-{
-  "date": "2025-04-21T20:00:00.000Z"
-}
-```
-
-## Example response 400
-
-```json
-{
-  "error": "InvalidParameters",
-  "message": "You must provide at least 'date' 'days' or 'hours'."
-}
-```
 
 ## Deployment
 
