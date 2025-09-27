@@ -1,8 +1,9 @@
 import { Body, Controller, HttpCode, Post, UseGuards } from '@nestjs/common';
 import { RethusMockDto } from './rethus-mock.dto';
 import { RethusService } from '../../domain/rethus-mock/rethus-mock-repository';
-import { ApiKeyGuard } from 'src/common/api-key.guard';
+
 import { ApiBody, ApiHeader, ApiOperation, ApiResponse } from '@nestjs/swagger';
+import { ApiKeyGuard } from '../../../common/api-key.guard';
 
 @Controller('api/v1/rethus-mock')
 export class RethusMockController {
