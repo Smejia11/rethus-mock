@@ -18,6 +18,71 @@ export class RethusMockController {
     required: true,
     example: 'mi-api-key-123',
   })
+  @ApiResponse({
+    status: 200,
+    description: 'Información obtenida correctamente',
+    content: {
+      'application/json': {
+        example: {
+          identificationType: 'CC',
+          identificationNumber: '38140065213',
+          firstName: 'NOMBRE',
+          lastName: 'APELLIDO',
+          secondLastName: 'NOMBRE 2',
+          middleName: 'APELLIDO2',
+          identificationStatus: 'Vigente',
+          academicInformation: [
+            {
+              programType: 'UNV',
+              obtainmentOrigin: 'Local',
+              title: 'Enfermería',
+              professionOrOccupation: 'Enfermería',
+              startPracticeDate: '2010-01-06',
+              administrativeAct: '21',
+              reportingEntity: 'DTS SECRETARIA DE SALUD DE CUNDINAMARCA',
+            },
+            {
+              programType: 'AUX',
+              obtainmentOrigin: 'Local',
+              title: 'Auxiliar de enfermería',
+              professionOrOccupation: 'Auxiliar de enfermería',
+              startPracticeDate: '2001-02-26',
+              administrativeAct: '251',
+              reportingEntity: 'GOBERNACION DEL TOLIMA',
+            },
+          ],
+        },
+      },
+    },
+  })
+  @ApiResponse({
+    status: 400,
+    description: 'Bad Request - validación fallida',
+    content: {
+      'application/json': {
+        example: {
+          statusCode: 400,
+          error: 'Bad Request',
+          message: [
+            'identificationType must be Cedula de Ciudadania,Cedula de Extranjeria,Permiso por protección temporal,Tarjeta de Identidad',
+          ],
+        },
+      },
+    },
+  })
+  @ApiResponse({
+    status: 401,
+    description: 'Unauthorized - API Key inválida o ausente',
+    content: {
+      'application/json': {
+        example: {
+          statusCode: 401,
+          error: 'Unauthorized',
+          message: 'Invalid or missing API key',
+        },
+      },
+    },
+  })
   @ApiBody({
     type: RethusMockDto,
     examples: {
