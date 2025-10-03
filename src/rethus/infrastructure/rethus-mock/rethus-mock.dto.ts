@@ -1,4 +1,11 @@
-import { IsEnum, IsNotEmpty, IsString, Length, Matches } from 'class-validator';
+import {
+  IsEnum,
+  IsNotEmpty,
+  IsString,
+  Length,
+  Matches,
+  IsOptional,
+} from 'class-validator';
 import { Transform } from 'class-transformer';
 
 export enum IdentificationType {
@@ -24,6 +31,7 @@ export class RethusMockDto {
   })
   identificationNumber!: string;
 
+  @IsOptional()
   @IsString()
   @IsNotEmpty()
   @Transform(({ value }: { value: string }) =>
@@ -36,6 +44,7 @@ export class RethusMockDto {
   )
   firstName!: string;
 
+  @IsOptional()
   @IsString()
   @IsNotEmpty()
   @Transform(({ value }: { value: string }) =>

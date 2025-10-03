@@ -9,8 +9,8 @@ export class InMemoryRethus extends RethusRepository {
     identificationNumber: '38140065213',
     firstName: 'NOMBRE',
     lastName: 'APELLIDO',
-    secondLastName: 'NOMBRE 2',
-    middleName: 'APELLIDO2',
+    secondLastName: 'APELLIDO 2',
+    middleName: 'NOMBRE 2',
     identificationStatus: 'Vigente',
     academicInformation: [
       {
