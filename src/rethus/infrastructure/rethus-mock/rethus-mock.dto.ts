@@ -9,10 +9,8 @@ import {
 import { Transform } from 'class-transformer';
 
 export enum IdentificationType {
-  CEDULA_CIUDADANIA = 'Cedula de Ciudadania',
-  CEDULA_EXTRANJERIA = 'Cedula de Extranjeria',
-  PERMISO_PROTECCION_TEMPORAL = 'Permiso por protección temporal',
-  TARJETA_IDENTIDAD = 'Tarjeta de Identidad',
+  CC = '1',
+  CE = '2',
 }
 
 export class RethusMockDto {

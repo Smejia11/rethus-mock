@@ -1,8 +1,7 @@
 export interface IAcademicInformation {
   programType: string;
   obtainmentOrigin: string;
-  title: string;
-  professionOrOccupation: string;
+  profession: string;
   startPracticeDate: string; // ISO date string (YYYY-MM-DD)
   administrativeAct: string;
   reportingEntity: string;
@@ -54,7 +53,7 @@ export class RethusMock {
         programType: ai.programType,
         obtainmentOrigin: ai.obtainmentOrigin,
         title: ai.title,
-        professionOrOccupation: ai.professionOrOccupation,
+        profession: ai.professionOrOccupation,
         startPracticeDate: ai.startPracticeDate,
         administrativeAct: ai.administrativeAct,
         reportingEntity: ai.reportingEntity,
@@ -76,8 +75,7 @@ export class RethusMock {
       academicInformation: this.attributes.academicInformation.map((ai) => ({
         programType: ai.programType,
         obtainmentOrigin: ai.obtainmentOrigin,
-        title: ai.title,
-        professionOrOccupation: ai.professionOrOccupation,
+        profession: ai.profession,
         startPracticeDate: ai.startPracticeDate,
         administrativeAct: ai.administrativeAct,
         reportingEntity: ai.reportingEntity,

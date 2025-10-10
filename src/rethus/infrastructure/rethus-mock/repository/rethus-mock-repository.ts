@@ -16,8 +16,7 @@ export class InMemoryRethus extends RethusRepository {
       {
         programType: 'UNV',
         obtainmentOrigin: 'Local',
-        title: 'Enfermería',
-        professionOrOccupation: 'Enfermería',
+        profession: 'Enfermería',
         startPracticeDate: '2010-01-06',
         administrativeAct: '21',
         reportingEntity: 'DTS SECRETARIA DE SALUD DE CUNDINAMARCA',
@@ -25,8 +24,7 @@ export class InMemoryRethus extends RethusRepository {
       {
         programType: 'AUX',
         obtainmentOrigin: 'Local',
-        title: 'Auxiliar de enfermería',
-        professionOrOccupation: 'Auxiliar de enfermería',
+        profession: 'Auxiliar de enfermería',
         startPracticeDate: '2001-02-26',
         administrativeAct: '251',
         reportingEntity: 'GOBERNACION DEL TOLIMA',

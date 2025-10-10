@@ -35,8 +35,7 @@ export class RethusMockController {
             {
               programType: 'UNV',
               obtainmentOrigin: 'Local',
-              title: 'Enfermería',
-              professionOrOccupation: 'Enfermería',
+              profession: 'Enfermería',
               startPracticeDate: '2010-01-06',
               administrativeAct: '21',
               reportingEntity: 'DTS SECRETARIA DE SALUD DE CUNDINAMARCA',
@@ -44,8 +43,7 @@ export class RethusMockController {
             {
               programType: 'AUX',
               obtainmentOrigin: 'Local',
-              title: 'Auxiliar de enfermería',
-              professionOrOccupation: 'Auxiliar de enfermería',
+              profession: 'Auxiliar de enfermería',
               startPracticeDate: '2001-02-26',
               administrativeAct: '251',
               reportingEntity: 'GOBERNACION DEL TOLIMA',
@@ -90,7 +88,7 @@ export class RethusMockController {
         summary: 'Ejemplo de entrada',
         description: 'Body de ejemplo para probar el endpoint',
         value: {
-          identificationType: 'Cedula de Ciudadania',
+          identificationType: '1',
           identificationNumber: '12332327',
           firstName: 'John',
           lastName: 'Doe',
