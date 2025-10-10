@@ -62,7 +62,7 @@ export class RethusMockController {
           statusCode: 400,
           error: 'Bad Request',
           message: [
-            'identificationType must be Cedula de Ciudadania,Cedula de Extranjeria,Permiso por protección temporal,Tarjeta de Identidad',
+            'identificationType must be 1,2',
           ],
         },
       },
