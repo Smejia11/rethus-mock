@@ -31,13 +31,39 @@ export class InMemoryRethus extends RethusRepository {
       },
     ],
   };
+  private rethusPersonDead: IRethusPersonPrimitive = {
+    identificationType: 'CC',
+    identificationNumber: '72179862',
+    firstName: 'NOMBRE',
+    lastName: 'APELLIDO',
+    secondLastName: 'APELLIDO 2',
+    middleName: 'NOMBRE 2',
+    identificationStatus: 'Fallecido',
+    academicInformation: [],
+  };
+  private rethusPersonNotFound: IRethusPersonPrimitive | null = null;
+  private rethusPersonInactive: IRethusPersonPrimitive = {
+    identificationType: 'CC',
+    identificationNumber: '95052323216',
+    firstName: 'NOMBRE',
+    lastName: 'APELLIDO',
+    secondLastName: 'APELLIDO 2',
+    middleName: 'NOMBRE 2',
+    identificationStatus: 'No vigente',
+    academicInformation: [],
+  };
   async getInfoRethus(PersonaDto: {
     tipoIdentificacion: string;
     numeroIdentificacion: string;
     primerNombre: string;
     primerApellido: string;
   }): Promise<IRethusPersonPrimitive | null> {
-    console.log(PersonaDto);
+    if (PersonaDto.numeroIdentificacion === '72179862')
+      return Promise.resolve(this.rethusPersonDead);
+    if (PersonaDto.numeroIdentificacion === '1129536242')
+      return Promise.resolve(this.rethusPersonNotFound);
+    if (PersonaDto.numeroIdentificacion === '95052323216')
+      return Promise.resolve(this.rethusPersonInactive);
     return Promise.resolve(this.rethusPerson);
   }
 }
